@@ -10,9 +10,6 @@ import com.facebook.react.modules.core.DeviceEventManagerModule;
 import com.facebook.react.bridge.WritableMap;
 import com.facebook.react.bridge.Arguments;
 
-import java.util.Map;
-import java.util.HashMap;
-
 public class CounterModule extends ReactContextBaseJavaModule {
   private static ReactApplicationContext reactContext;
 

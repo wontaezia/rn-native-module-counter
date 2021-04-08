@@ -6,16 +6,16 @@ export default function App() {
   const CounterEvents = new NativeEventEmitter(Counter);
 
   useEffect(() => {
-    CounterEvents.addListener("onIncrement", (res) => {
-      console.log(res)
-    })
-    CounterEvents.addListener("onDecrement", (res) => {
-      console.log(res)
-    })
+    CounterEvents.addListener("onIncrement", showCount)
+    CounterEvents.addListener("onDecrement", showCount)
   }, [CounterEvents])
 
   const showCount = (value) => {
-    console.log('count is ' + value)
+    if (typeof value === "number") {
+      console.log('count is ' + value)
+    } else {
+      console.log('count is ' + value.count)
+    }
   }
 
   return (
